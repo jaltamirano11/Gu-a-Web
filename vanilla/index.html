@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Alternativa Moderna (Vanilla JS)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <main class="card">
+    <h1>Alternativa Moderna a Spry: Fetch + Plantillas (Vanilla JS)</h1>
+    <p>
+      Hoy, la tarea de traer datos y mostrarlos se resuelve sin librerías externas, 
+      usando la función nativa $\mathbf{fetch()}$ de JavaScript para obtener los datos 
+      (simulando una URL remota) y las **Plantillas de Texto (Template Literals)** para generar el HTML.
+    </p>
+
+    <div class="demo-container">
+      <button id="cargar">Cargar Productos</button>
+      <ul id="lista"></ul>
+    </div>
+
+    <h2>Análisis del Código JavaScript</h2>
+    <p>
+      Aquí es donde reemplazamos las etiquetas <code>spry:repeat</code>. Usamos 
+      <code>.map()</code> para recorrer el array de datos y <code>.join('')</code> para 
+      unir todas las cadenas HTML generadas.
+    </p>
+
+    <pre>
+&lt;script&gt;
+  const btn = document.getElementById('cargar');
+  const lista = document.getElementById('lista');
+
+  // 1. FUNCIÓN PLANTILLA (Reemplaza los placeholders {campo})
+  const plantilla = (p) => {
+    // Usamos Plantillas de Texto (`backticks`) para inyectar variables
+    return `&lt;li&gt;${p.nombre} — ₡${p.precio.toLocaleString('es-CR')}&lt;/li&gt;`;
+  };
+
+  btn.addEventListener('click', async () => {
+    // Feedback al usuario:
+    btn.disabled = true; 
+    btn.textContent = 'Cargando...';
+
+    // 2. FETCH SIMULADO (Reemplaza Spry.Data.JSONDataSet)
+    // El 'await' detiene la ejecución sin bloquear la interfaz.
+    await new Promise(r => setTimeout(r, 700));
+
+    const productos = [ /* ... datos JSON ... */ ];
+    
+    // 3. GENERACIÓN DE HTML (Reemplaza spry:repeat)
+    // .map(plantilla) genera un ARRAY de strings HTML.
+    // .join('') los une en una sola gran cadena.
+    lista.innerHTML = productos.map(plantilla).join('');
+    
+    // Devolvemos el control:
+    btn.textContent = 'Recargar'; 
+    btn.disabled = false;
+  });
+&lt;/script&gt;
+    </pre>
+  </main>
+
+  <script>
+    const btn = document.getElementById('cargar');
+    const lista = document.getElementById('lista');
+
+    const plantilla = (p) => `<li>${p.nombre} — ₡${p.precio.toLocaleString('es-CR')}</li>`;
+
+    btn.addEventListener('click', async () => {
+      btn.disabled = true; btn.textContent = 'Cargando...';
+      // Simulación de fetch a un JSON remoto:
+      await new Promise(r => setTimeout(r, 700));
+      const productos = [
+        { id:1, nombre:'Café chorreado', precio: 1800 },
+        { id:2, nombre:'Tamales', precio: 1200 },
+        { id:3, nombre:'Pan casero', precio: 900 },
+      ];
+      lista.innerHTML = productos.map(plantilla).join('');
+      btn.textContent = 'Recargar'; btn.disabled = false;
+    });
+  </script>
+</body>
+</html>

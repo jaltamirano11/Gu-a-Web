@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Eventos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <main class="card">
+    <h1>Acciones y Eventos (Event Listeners)</h1>
+    <p>
+      JavaScript nos permite "escuchar" acciones del usuario (eventos). 
+      Prueba los elementos de abajo y mira cómo se registran en el log.
+    </p>
+
+    <section class="categoria-evento">
+      <h2>Eventos de Click (Síncrono y Asíncrono)</h2>
+      <p>
+        <code>click</code> es el evento más común. Puede disparar tareas
+        simples o complejas (como cargar datos de un servidor).
+      </p>
+      <div class="row">
+        <button id="btnClick">Click (Simple)</button>
+        <button id="btnAsync">Cargar datos (Simula Fetch)</button>
+      </div>
+    </section>
+
+    <section class="categoria-evento">
+      <h2>Eventos de Teclado/Input</h2>
+      <p>
+        El evento <code>input</code> se dispara cada vez que el valor 
+        de un campo cambia (¡más moderno que <code>keydown</code>!).
+      </p>
+      <div class="row">
+        <input id="txtNombre" type="text" placeholder="Escribí tu nombre (input)" />
+      </div>
+    </section>
+
+    <section class="categoria-evento">
+      <h2>Eventos de Mouse y Foco</h2>
+      <p>
+        <code>mouseenter</code>/<code>mouseleave</code> rastrean el puntero. 
+        <code>focus</code>/<code>blur</code> rastrean la selección (con mouse o teclado).
+      </p>
+      <div class="row">
+        <div id="box" tabindex="0">Hover / Focus</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Log de Eventos</h2>
+      <pre id="log"></pre>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

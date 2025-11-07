@@ -1,0 +1,94 @@
+/* === Estilo general === */
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(135deg, #f7f8fa, #e3e6ea);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+/* === Contenedor principal === */
+.portal {
+  background-color: #ffffff;
+  padding: 3rem 4rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  text-align: center;
+}
+
+/* === Título === */
+.portal h1 {
+  font-size: 2.2rem;
+  color: #0d3b66;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #0d3b66;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+  text-align: center;
+}
+
+/* === Descripción === */
+.portal p {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* === Lista de enlaces centrados === */
+.portal ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* === Cada elemento de la lista === */
+.portal li {
+  text-align: center;
+  margin: 0.6rem 0;
+  width: 80%;
+  max-width: 350px;
+}
+
+/* === Enlaces como botones === */
+.portal a {
+  display: block;
+  width: 90%;
+  text-decoration: none;
+  color: #0d3b66;
+  font-weight: 600;
+  font-size: 1rem;
+  background-color: #e8f0fe;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+  text-align: left;
+}
+
+.portal a:hover {
+  background-color: #0d3b66;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(13, 59, 102, 0.2);
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  .portal {
+    padding: 2rem;
+  }
+  .portal h1 {
+    font-size: 1.8rem;
+  }
+  .portal li {
+    width: 100%;
+  }
+}

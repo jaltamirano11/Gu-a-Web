@@ -1,0 +1,198 @@
+/* === Estilo global === */
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(135deg, #f7f8fa, #e3e6ea);
+  color: #333;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* === Tarjetas principales === */
+.card {
+  background-color: #fff;
+  padding: 2.5rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 900px;
+  box-sizing: border-box;
+}
+
+.card h1{
+  text-align: center;
+  color: #0d3b66;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #0d3b66;
+
+  padding-bottom: 0.3rem;
+}
+.card h2 {
+  text-align: center;
+  color: #0d3b66;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #0d3b66;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+/* === Formulario en modo horizontal === */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem 1.5rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* === Etiquetas e inputs === */
+label {
+  flex: 1 1 calc(50% - 1rem);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-weight: 500;
+  color: #333;
+  min-width: 260px;
+}
+
+input,
+select {
+  margin-top: 0.4rem;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #0d3b66;
+  box-shadow: 0 0 5px rgba(13, 59, 102, 0.3);
+  outline: none;
+}
+
+/* === Fieldset (Preferencias) === */
+fieldset {
+  flex: 1 1 100%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+
+legend {
+  font-weight: 600;
+  color: #0d3b66;
+}
+
+fieldset label {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  font-weight: normal;
+}
+
+/* === Botón principal === */
+button {
+  background-color: #0d3b66;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 0.9rem 1.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+  align-self: flex-end;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background-color: #155a9a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(13, 59, 102, 0.2);
+}
+
+/* === Resultado y lista === */
+#resultado {
+  background-color: #f7f9fb;
+  border: 1px solid #d9e1ec;
+  border-radius: 8px;
+  padding: 1rem;
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: #333;
+  white-space: pre-wrap;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+#listaUsuarios {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+#listaUsuarios li {
+  background-color: #e8f0fe;
+  border: 1px solid #d0e0ff;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.6rem;
+  color: #0d3b66;
+  font-weight: 500;
+}
+
+#sinRegistros {
+  text-align: center;
+  font-style: italic;
+  color: #777;
+  margin-top: 1rem;
+}
+
+/* === Responsive (modo vertical en pantallas pequeñas) === */
+@media (max-width: 700px) {
+  form {
+    flex-direction: column;
+  }
+
+  label {
+    flex: 1 1 100%;
+  }
+
+  button {
+    width: 100%;
+    align-self: center;
+  }
+}
+
+
+
+
+#btnEliminarTodo {
+  background-color: #b00020;
+  color: #fff;
+  font-weight: 400;
+  border: none;
+  border-radius: 8px;
+  padding: 0.9rem 1.5rem;
+  cursor: pointer;
+  font-size: 1rem;      
+  transition: all 0.25s ease;
+  display: block;
+  width: 30%;
+}
+
+#btnEliminarTodo:hover {
+  background-color: #d32f2f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(176, 0, 32, 0.3);
+}

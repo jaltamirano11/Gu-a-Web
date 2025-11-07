@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Formularios</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+  
+  <main class="card">
+    <h1>Registro rápido</h1>
+
+    <form id="formRegistro" novalidate>
+      <label>
+        Nombre:
+        <input type="text" name="nombre" placeholder="Tu nombre" required />
+      </label>
+
+      <label>
+        Correo:
+        <input type="email" name="correo" placeholder="tu@correo.com" required />
+      </label>
+
+      <label>
+        Contraseña:
+        <input type="password" name="clave" minlength="4" required />
+      </label>
+
+      <label>
+        Provincia:
+        <select name="provincia" required>
+          <option value="">Seleccione…</option>
+          <option>Limón</option>
+          <option>San José</option>
+          <option>Alajuela</option>
+          <option>Cartago</option>
+          <option>Heredia</option>
+          <option>Puntarenas</option>
+          <option>Guanacaste</option>
+        </select>
+      </label>
+
+      <fieldset>
+        <legend>Preferencias</legend>
+        <label><input type="checkbox" name="boletin" /> Recibir boletín</label>
+        <label><input type="radio" name="turno" value="mañana" required /> Mañana</label>
+        <label><input type="radio" name="turno" value="tarde" required /> Tarde</label>
+      </fieldset>
+
+      <button type="submit">Registrar</button>
+    </form>
+
+    <pre id="resultado"></pre>
+  </main>
+
+  <section class="card" id="seccion-registrados">
+    <h2>Usuarios Registrados</h2>
+    
+    <p id="sinRegistros">Aún no hay usuarios registrados.</p>
+
+    <ul id="listaUsuarios"></ul>
+
+    <button id="btnEliminarTodo" type="button">Eliminar todos los registros</button>
+  </section>
+
+
+  <script src="form.js"></script>
+</body>
+</html>

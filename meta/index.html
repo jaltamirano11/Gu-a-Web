@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  
+  <title>Etiquetas META | Mini Guía</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <meta name="description" content="Mini guía con ejemplos de formularios, hipervínculos, meta, eventos y alternativa a Spry." />
+  
+  <meta name="author" content="Jose Romero" />
+  <meta name="keywords" content="HTML, formularios, hipervínculos, meta, eventos, Spry" />
+  
+  <meta name="theme-color" content="#0ea5e9" />
+  
+  <meta property="og:title" content="Mini Guía Web" />
+  <meta property="og:description" content="Ejemplos claros y listos para clase." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="httpsa://via.placeholder.com/1200x630.png?text=Mini+Guia" />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="card">
+    <h1>Etiquetas META: El "Cerebro" de la Página</h1>
+    <p>
+      Las etiquetas $\mathbf{<meta>}$ viven en el $\mathbf{<head>}$ y son invisibles para el usuario. 
+      Su trabajo es dar instrucciones y descripciones a los **navegadores**, 
+      **buscadores** (como Google) y **redes sociales** (como Facebook o WhatsApp).
+    </p>
+    <p>
+      A continuación, simulamos cómo "leen" el $\mathbf{<head>}$ de esta página:
+    </p>
+
+    <h2>Efecto 1: Vista en Buscadores (SEO)</h2>
+    <p>
+      Google usa $\mathbf{<title>}$ y $\mathbf{<meta name="description">}$ para
+      construir este resultado de búsqueda:
+    </p>
+    
+    <div class="google-preview">
+      <span class="google-url">https://www.tu-sitio-web.com/index.html</span>
+      <h3 class="google-title">Etiquetas META | Mini Guía</h3>
+      <p class="google-desc">
+        Mini guía con ejemplos de formularios, hipervínculos, meta, eventos y alternativa a Spry.
+      </p>
+    </div>
+
+    <h2>Efecto 2: Vista en Redes Sociales (Open Graph)</h2>
+    <p>
+      WhatsApp, Facebook, etc., ignoran la descripción normal y buscan
+      etiquetas $\mathbf{<meta property="og:...">}$ (Open Graph).
+    </p>
+
+    <div class="social-preview">
+      <img src="httpsa://via.placeholder.com/1200x630.png?text=Mini+Guia" alt="Preview de Redes Sociales" class="social-image" />
+      <div class="social-content">
+        <span class="social-url">TU-SITIO-WEB.COM</span>
+        <h4 class="social-title">Mini Guía Web</h4>
+        <p class="social-desc">Ejemplos claros y listos para clase.</p>
+      </div>
+    </div>
+
+    <h2>Efecto 3: Navegador Móvil (UI)</h2>
+    <p>
+      $\mathbf{<meta name="viewport">}$ le dice al móvil que no haga zoom.
+      <br>
+      $\mathbf{<meta name="theme-color">}$ pinta la barra del navegador.
+    </p>
+
+    <div class="browser-preview">
+      <div class="browser-bar">
+        <span>🔒 tu-sitio-web.com</span>
+      </div>
+      <div class="browser-content">
+        (Tu página se vería aquí, adaptada al ancho del móvil gracias al 'viewport')
+      </div>
+    </div>
+
+  </main>
+
+</body>
+</html>

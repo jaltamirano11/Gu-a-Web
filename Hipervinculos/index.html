@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hipervínculos | Guía Docente</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="guia-container">
+    <h1>Guía Práctica de Hipervínculos</h1>
+
+    <section class="categoria-enlace">
+      <h2>Tipo 1: Vínculos Internos (Anclas)</h2>
+      <!--<p>
+        Usan el símbolo $\mathbf{#}$ seguido del $\mathbf{id}$ del elemento al que queremos saltar. 
+        Son útiles para crear índices o navegar dentro de una página larga (Landing Page).
+      </p>-->
+      <ul>
+        <li><a href="#seccion1">Ir a Sección 1</a></li>
+        <li><a href="#seccion2">Ir a Sección 2</a></li>
+      </ul>
+    </section>
+
+    <section class="categoria-enlace">
+      <h2>Tipo 2: Vínculos Externos</h2>
+      <!--<p>
+        Apuntan a un recurso fuera de nuestro sitio. Requieren la URL completa 
+        (incluyendo $\mathbf{https://}$).
+      </p>-->
+      <ul>
+        <li>
+          <a href="https://www.earth.ac.cr/home/" target="_blank" rel="noopener noreferrer">
+            Abrir Universidad EARTH (en nueva pestaña)
+          </a>
+        </li>
+        <li>
+          <a href="https://www.google.com">Ir a Google (en la misma pestaña)</a>
+        </li>
+      </ul>
+      <!--<p class="consejo-pro">
+        <strong>Mejor Práctica:</strong> Al usar $\mathbf{target="_blank"}$ (para abrir en nueva pestaña), 
+        siempre añade $\mathbf{rel="noopener noreferrer"}$ por seguridad y rendimiento.
+      </p>-->
+    </section>
+
+
+    <section class="categoria-enlace">
+      <h2>Tipo 3: Vínculos de Descarga</h2>
+      <!--<p>
+        Al añadir el atributo $\mathbf{download}$, forzamos al navegador a descargar 
+        el archivo (ej. un PDF) en lugar de intentar mostrarlo.
+      </p>-->
+      <ul>
+        <li>
+          <a href="img/ImagenEjercicio.jpg" download>Descargar Imagen</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="categoria-enlace">
+      <h2>Tipo 5: Vínculos Especiales</h2>
+      <ul>
+        <li><a href="mailto:jo476504@gmail.com">Enviar correo </a></li>
+        <li><a href="tel:+5064201145">Llamar</a></li>
+      </ul>
+    </section>
+    
+    <hr>
+    
+    <section id="seccion1">
+      <h2>Destino: Sección 1</h2>
+      <p>¡Llegaste a la sección 1 usando un ancla!</p>
+      <a href="#top">Volver arriba</a>
+    </section>
+
+    <section id="seccion2">
+      <h2>Destino: Sección 2</h2>
+      <p>¡Llegaste a la sección 2 usando un ancla!</p>
+      <a href="#top">Volver arriba</a>
+    </section>
+
+  </main>
+</body>
+</html>
